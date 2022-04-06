@@ -27,17 +27,27 @@ public class Main {
         beings.add(loup1);
         beings.add(orc1);
 
-        System.out.println("Non trié : " + beings);
+        System.out.println("\n*********************\n");
+        System.out.println("Non trié : ");
+        for (Being being : beings) {
+            System.out.println(being.getName() + " : " + being.getHealth() + " points de santé");
+        }
         Collections.sort(beings);
-        System.out.println("Trié par points de santé : " + beings);
+        System.out.println("\n*********************\n");
+        System.out.println("Trié par points de santé : ");
+        for (Being being : beings) {
+            System.out.println(being.getName() + " : " + being.getHealth() + " points de santé");
+        }
 
+        System.out.println("\n*********************\n");
         tree.receiveDamage(10);
         humain1.receiveDamage(30);
         dragon.receiveDamage(50);
         loup1.receiveDamage(5);
         orc1.receiveDamage(12);
 
-        System.out.println("Résistance de la maison de " + house.getOwner() + " : " + house.getMaterial().getResistance());
+        System.out.println("\n*********************\n");
+        System.out.println("Résistance de la maison en " + house.getMaterial() + " de " + house.getOwner().getName() + " : " + house.getMaterial().getResistance());
 
     }
 }
