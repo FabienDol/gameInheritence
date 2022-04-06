@@ -37,5 +37,7 @@ public class Main {
         loup1.receiveDamage(5);
         orc1.receiveDamage(12);
 
+        System.out.println("Résistance de la maison de " + house.getOwner() + " : " + house.getMaterial().getResistance());
+
     }
 }
